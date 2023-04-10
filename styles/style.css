@@ -227,7 +227,7 @@ template {
 }
 
 html {
-  font-size: 125%;
+  font-size: 16px;
   font-family: "Rubik", sans-serif;
   line-height: 1.15;
   background-color: #fff;
@@ -237,6 +237,10 @@ html {
 ul {
   margin: 0;
   padding: 0;
+}
+ul li {
+  text-decoration: none;
+  list-style: none;
 }
 
 a {
@@ -255,7 +259,7 @@ header {
 
 .wrapper {
   margin: 0 auto;
-  max-width: 60%;
+  max-width: 50%;
 }
 
 .flexContainer {
@@ -277,7 +281,7 @@ header {
 }
 .promo .textContainer {
   margin: 0 auto;
-  width: 60%;
+  width: 50%;
   justify-content: space-between;
 }
 .promo .textContainer .currency {
@@ -286,5 +290,31 @@ header {
 }
 .promo .textContainer .currency a {
   color: #fff;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  height: 10vh;
+}
+nav .checkout {
+  height: auto;
+  width: auto;
+  max-height: 25px;
+  max-width: 25px;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+}
+nav ul li {
   padding: 1rem;
+  max-width: 50%;
+}
+nav ul li a {
+  color: #000;
 }
