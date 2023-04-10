@@ -11,10 +11,13 @@ html {
 }
 
 ul {
-    text-decoration: none;
-    list-style: none;
     margin: 0;
     padding: 0;
+}
+
+a {
+    text-decoration: none;
+    list-style: none;
 }
 
 img {
@@ -38,7 +41,35 @@ header {
         max-width: 50%;
     }
 
+}
+
+.textContainer {
+    display: flex;
+}
+
+// Styling .promo bar
+
+.promo {
+    display: flex;
+    background-color: #abd373;
+    color: #fff;
+    text-transform: uppercase;
+
     .textContainer {
-        max-width: 50%;
+        margin: 0 auto;
+        width: 60%;
+        justify-content: space-between;
+
+        .currency {
+            display: flex;
+            align-items: center;
+
+            a {
+                color: #fff;
+                padding: 1rem;
+            }
+        }
     }
 }
+
+// Styling Nav 
