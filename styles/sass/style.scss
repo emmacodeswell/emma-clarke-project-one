@@ -1,0 +1,24 @@
+@use "./partials/setup";
+
+// General styles
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 60%;
+}
+
+header {
+    background-color: #F8EEE5;
+}
+
+.flexContainer {
+    display: flex;
+    
+    img {
+        max-width: 50%;
+    }
+
+    .textContainer {
+        max-width: 50%;
+    }
+}
