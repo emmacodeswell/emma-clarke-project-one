@@ -226,13 +226,33 @@ template {
   overflow: hidden;
 }
 
-.wrapper {
-  margin: 0 auto;
-  max-width: 60%;
+html {
+  font-size: 125%;
+  font-family: "Rubik", sans-serif;
+  line-height: 1.15;
+  background-color: #fff;
+  color: #000000;
+}
+
+ul {
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  flex: 0 0 auto;
+  align-self: center;
 }
 
 header {
   background-color: #F8EEE5;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 60%;
 }
 
 .flexContainer {
