@@ -34,6 +34,12 @@ header {
     background-color: #F8EEE5;
 }
 
+h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
 .wrapper {
     margin: 0 auto;
     max-width: 50%;
@@ -104,6 +110,53 @@ nav {
 
             a {
                 color: #000;
+            }
+        }
+    }
+}
+
+// Styling Header
+
+header {
+    .flexContainer {
+        height: 60vh;
+    }
+
+    .textContainer {
+        justify-content: center;
+        flex-flow: column;
+        margin-right: 2rem;
+    
+        h2 {
+            font-size: 5rem;
+            text-transform: uppercase; //TODO: add general styles for h2 and h3s
+            margin: 1rem 0;
+        }
+
+        h3 {
+            font-size: 3rem;
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 1rem;
+            font-weight: 400;
+            text-transform: capitalize;
+            margin: 0;
+        }
+
+        a {
+            align-self: flex-start;
+            text-transform: uppercase;
+            color: #fff;
+            background-color: #abd373;
+            border-radius: 30px;
+            margin: 2rem 0;
+            padding: 1rem 2rem;
+
+            &:hover {
+                background-color: #475e28;
             }
         }
     }
