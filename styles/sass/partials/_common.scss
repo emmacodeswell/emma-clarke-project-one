@@ -50,6 +50,10 @@ p {
 
 section {
     margin: 4rem 0;
+
+    @include mobile {
+        margin: 3rem 0;
+    }
 }
 
 h2.line {
@@ -58,6 +62,10 @@ h2.line {
     text-transform: uppercase;
     text-align: center;
     
+    @include mobile {
+        font-size: 1.75rem;
+    }
+
     // === From: https://stackoverflow.com/a/14731123
     overflow: hidden;
 
@@ -94,6 +102,14 @@ p.greenInfo {
 .wrapper {
     margin: 0 auto;
     width: $contentWidth;
+
+    @include tablet {
+        width: $tablet - $gap;
+    }
+
+    @include mobile {
+        width: $mobile - $gap/2;
+    }
 }
 
 .flexContainer {
@@ -101,8 +117,17 @@ p.greenInfo {
     padding: 3rem 0;
     align-items: center;
 
+    @include mobile {
+        flex-flow: column;
+    }
+
     img {
         max-width: 50%;
+
+        @include mobile {
+            max-width: 100%;
+            order: -1;
+        }
     }
 }
 
@@ -118,12 +143,31 @@ p.greenInfo {
     row-gap: $gap;
     column-gap: $gap;
 
+    @include tablet {
+        align-items: center;
+        justify-content: center;
+        width: $tablet - $gap;
+    }
+
+    @include mobile {
+        width: $mobile - $gap/2;
+    }
+
     > * {
         width: $oneThird;
+
+        @include tablet {
+            width: auto;
+        }
     }
 
     > .twoThirds {
         width: $twoThirds;
+
+        @include tablet {
+            width: 100%;
+        }
+
     }
 }
 
