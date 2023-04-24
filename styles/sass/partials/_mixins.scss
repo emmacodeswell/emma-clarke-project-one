@@ -1,0 +1,18 @@
+@use "./variables" as *;
+
+// Mixins
+
+// Green text styling mixin
+@mixin greenInfo {
+    font-size: 1.2rem;
+    color: $green;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+// Flexy and space-between mixin
+@mixin spaceBetween {
+    display: flex;
+    justify-content: space-between;
+}
+  

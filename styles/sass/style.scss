@@ -1,163 +1,255 @@
+@use "./partials/variables" as *;
+@use "./partials/mixins" as *;
 @use "./partials/setup";
+@use "./partials/common";
 
-// General styles //
-
-html {
-    font-size: 16px;
-    font-family: 'Rubik', sans-serif;
-    line-height: 1.15;
-    background-color: #fff;
-    color: #000000;
-}
-
-ul {
-    margin: 0;
-    padding: 0;
-
-    li {
-        text-decoration: none;
-        list-style: none;
-    }
-}
-
-a {
-    text-decoration: none;
-    list-style: none;
-}
-
-img {
-    flex: 0 0 auto;
-    align-self: center;
-}
-
-header {
-    background-color: #F8EEE5;
-}
-
-h1, h2, h3 {
-    margin: 0;
-    padding: 0;
-    font-weight: normal;
-}
-
-.wrapper {
-    margin: 0 auto;
-    max-width: 50%;
-}
-
-.flexContainer {
-    display: flex;
-
-    img {
-        max-width: 50%;
-    }
-
-}
-
-.textContainer {
-    display: flex;
-}
 
 // Styling .promo bar
-
 .promo {
     display: flex;
-    background-color: #abd373;
-    color: #fff;
+    background-color: $green;
+    color: $white;
     text-transform: uppercase;
+    font-weight: 400;
 
-    .textContainer {
-        margin: 0 auto;
-        width: 50%;
-        justify-content: space-between;
+    .currency {
+        display: flex;
+        align-items: center;
 
-        .currency {
-            display: flex;
-            align-items: center;
-
-            a {
-                color: #fff;
-                padding-left: 1rem;
-                padding-top: 1rem;
-                padding-bottom: 1rem;
-            }
+        a {
+            color: $white;
+            padding-left: 1rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
         }
     }
 }
 
 // Styling Nav //
-
 nav {
-    display: flex;
-    justify-content: space-between;
-    height: 10vh;
-
     .checkout {
-        height: auto;
-        width: auto;
-        max-height: 25px;
-        max-width: 25px;
+        height: 25px;
+        width: 25px;
     }
 
     ul {
-        display: flex;
-        align-items: center;
         text-transform: uppercase;
 
         li {
             padding: 1rem;
-            max-width: 50%;
 
             a {
-                color: #000;
+                color: $darkGrey;
             }
         }
     }
 }
 
-// Styling Header
+.logo {
+    display: block;
+}
 
-header {
-    .flexContainer {
-        height: 60vh;
+// Styling Header
+.hero {
+    h2 {
+        font-size: 3rem;
+        text-transform: uppercase;
+        font-weight: 300;
+
+        strong {
+            display: block;
+            font-size: 5rem;
+            font-weight: 400;
+            margin: 1rem 0;
+        }
     }
 
-    .textContainer {
+    p {
+        font-size: 1rem;
+        font-weight: 400;
+        text-transform: capitalize;
+    }
+}
+
+// Styling .benefits
+.blurb {
+    display: flex;
+    padding: 1rem 1.5rem;
+    border: 2px dotted $green;
+    border-radius: 6px;
+
+    img {
+        width: 3rem;
+        margin-right: 1rem;
+    }
+
+    h2,
+    p {
+        margin: 0.5rem 0;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+}
+
+// Styling .gallery
+.gallery {
+    .options {
+        display: flex;
         justify-content: center;
-        flex-flow: column;
-        margin-right: 2rem;
-    
-        h2 {
-            font-size: 5rem;
-            text-transform: uppercase; //TODO: add general styles for h2 and h3s
-            margin: 1rem 0;
+        margin: 1rem 0;
+
+        button {
+            margin: 1.5rem 0.5rem;
+            padding: 0.5rem 1rem;
+            background-color: transparent;
+            border: 2px solid $lightGrey;
+            border-radius: 4px;
+
+            &:hover {
+                border: 2px dotted $green;
+            }
+        }
+    }
+}
+
+// Styling .products section
+.products {
+    display: flex;
+    flex-flow: row wrap;
+    column-gap: $gap;
+    row-gap: $gap;
+
+    .plant {
+        flex: 1 0 20%;
+
+        > img {
+            width: 100%;
+        }
+
+        button {
+            background: transparent;
+            border: none;
+            box-shadow: $shadowSize rgba(0, 0, 0, 0.2);
+
+            img {
+                padding-top: 4px;
+                padding-right: 4px;
+                height: 1.75rem;
+                width: 1.75rem;
+            }
+
+            &:hover {
+                box-shadow: $shadowSize rgba(22, 59, 12, 0.6); 
+            }
+        }
+    }
+}
+
+// Styling .collections sections
+.collections {
+
+    .b1 { background-image: url(../assets/b1.jpeg); }
+    .b2 { background-image: url(../assets/b2.jpeg); }
+    .b3 { background-image: url(../assets/b3.jpeg); }
+    .b4 { background-image: url(../assets/b4.jpeg); }
+
+    h3 {
+        font-size: 2.5rem;
+        font-weight: 500;
+        margin: 1rem 0;
+    }
+
+    > * {
+        height: 300px;
+        padding: $gap $gap * 2;
+    }
+
+    .twoThirds {
+        padding-right: 385px;
+    }
+
+    .centered {
+        text-align: center;
+
+        .cta {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+// Styling .blog section
+.blog {
+    > p {
+        font-weight: 500;
+        text-align: center;
+        padding: 0 25%;
+        margin: 1rem 0 3rem;
+    }
+
+    article {
+        color: $darkGrey;
+        background: $faintBlue;
+        border-radius: 6px;
+        padding: 1rem 2rem;
+
+        img {
+            display: block;
+            margin: 2rem 0;
         }
 
         h3 {
-            font-size: 3rem;
-            font-weight: 300;
-            text-transform: uppercase;
+            font-size: 2rem;
+            font-weight: 700;
         }
+    }
+}
 
-        p {
-            font-size: 1rem;
-            font-weight: 400;
-            text-transform: capitalize;
-            margin: 0;
-        }
+// Styling footer
+footer {
+    background: url(../assets/footer.jpg) no-repeat bottom;
+    background-size: cover;
+    padding-top: 4rem;
 
-        a {
-            align-self: flex-start;
-            text-transform: uppercase;
-            color: #fff;
-            background-color: #abd373;
-            border-radius: 30px;
-            margin: 2rem 0;
-            padding: 1rem 2rem;
+    a {
+        color: $black;
+    }
 
-            &:hover {
-                background-color: #475e28;
+    ul {
+        line-height: 2;
+    }
+    
+    .wrapper {
+        display: flex;
+        align-items: baseline;
+        flex-flow: row wrap;
+        column-gap: 5rem;
+        row-gap: $gap;
+
+        .socials {
+            flex: 1 1 0;
+
+            i {
+                font-size: 1.5rem;
+                margin-right: 1rem;
             }
         }
+    }
+
+    .phone {
+        font-size: 2rem;
+        line-height: 1;
+        margin: 1rem 0;
+    }
+
+    .copyright {
+        color: $leafGreen;
+        border-top: currentColor solid 1px;
+        width: 100%;
+        text-align: center;
+        padding-top: 1rem;
     }
 }
