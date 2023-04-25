@@ -1,4 +1,5 @@
 html {
+  scroll-behavior: smooth;
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -239,12 +240,21 @@ address {
   font-style: normal;
 }
 
+a:hover, a:focus,
+button:hover,
+button:focus {
+  transition: 0.25s;
+}
+
 ::-moz-placeholder {
   opacity: 1;
+  -moz-transition: 0.25s;
+  transition: 0.25s;
 }
 
 ::placeholder {
   opacity: 1;
+  transition: 0.25s;
 }
 
 html {
@@ -265,6 +275,9 @@ ul li {
 
 a {
   text-decoration: none;
+}
+a:hover {
+  color: #8BB88E;
 }
 
 button {
