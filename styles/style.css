@@ -548,7 +548,7 @@ p.greenInfo time {
 }
 #contactPage .contact form textarea {
   flex: 1 1 100%;
-  resize: vertical;
+  resize: none;
   min-height: 2rem;
   max-height: 10rem;
 }
