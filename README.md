@@ -1,4 +1,4 @@
-# emmaClarkeProjectOne
+# Project 1 - Pronia Multipage Design Conversion
 ## About Project 1
 This is my project 1 for the online Juno Web Development bootcamp, cohort 49. This multi-page responsive website was made using HTML5, SCSS, sass variables, and mixins. 
 ## Assets
