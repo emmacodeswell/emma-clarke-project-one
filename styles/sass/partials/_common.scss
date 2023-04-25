@@ -186,6 +186,7 @@ p.greenInfo {
     width: min-content;
 
     &:hover {
+        color: $white;
         background-color: $darkGreen;
     }
 }
