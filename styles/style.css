@@ -592,6 +592,7 @@ p.greenInfo time {
 nav .checkout {
   height: 25px;
   width: 25px;
+  margin-left: 86px;
 }
 @media (max-width: 767px) {
   nav .checkout {
