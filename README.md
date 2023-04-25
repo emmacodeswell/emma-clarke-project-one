@@ -6,4 +6,4 @@ This is my project 1 for the online Juno Web Development bootcamp, cohort 49. Th
 - Font hosted by Google Fonts
 - Icons hosted by Font Awesome
 ## Live Link
-[Netlify Live Link](emmaclarkeproject1.netlify.app)
+[Netlify Live Link](https://emmaclarkeproject1.netlify.app/)
