@@ -16,6 +16,14 @@
     justify-content: space-between;
 }
 
+// Hover pointer
+@mixin hover {
+    &:hover {
+        cursor: pointer;
+        @content;
+    }
+}
+
 // Media queries mixins
 
 // Anything smaller than desktop
