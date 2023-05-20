@@ -185,7 +185,7 @@ p.greenInfo {
     white-space: nowrap;
     width: min-content;
 
-    &:hover {
+    @include hover {
         color: $white;
         background-color: $darkGreen;
     }

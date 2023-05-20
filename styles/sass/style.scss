@@ -155,7 +155,7 @@ nav {
                 padding: 0.25rem 0.5rem;
             }
 
-            &:hover {
+            @include hover {
                 border: 2px dotted $green;
             }
         }
@@ -188,6 +188,8 @@ nav {
         > img {
             width: 100%;
 
+            @include hover;
+
             @include mobile {
                 padding: 0 25%;
             }
@@ -205,7 +207,7 @@ nav {
                 width: 1.75rem;
             }
 
-            &:hover {
+            @include hover {
                 box-shadow: $shadowSize rgba(22, 59, 12, 0.6); 
             }
         }
