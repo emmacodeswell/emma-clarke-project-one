@@ -446,6 +446,7 @@ p.greenInfo time {
   width: min-content;
 }
 .cta:hover {
+  cursor: pointer;
   color: #fff;
   background-color: #475E28;
 }
@@ -554,6 +555,25 @@ p.greenInfo time {
 }
 #contactPage .contact form button {
   margin-left: auto;
+}
+
+#pop-up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+#pop-up > div {
+  background-color: white;
+  border-radius: 30px;
+  padding: 30px;
+  min-width: 50%;
+  text-align: center;
 }
 
 .promo {
@@ -694,6 +714,7 @@ nav ul li a {
   }
 }
 .gallery .options button:hover {
+  cursor: pointer;
   border: 2px dotted #ABD373;
 }
 
@@ -726,6 +747,9 @@ nav ul li a {
 .products .plant > img {
   width: 100%;
 }
+.products .plant > img:hover {
+  cursor: pointer;
+}
 @media (max-width: 767px) {
   .products .plant > img {
     padding: 0 25%;
@@ -743,6 +767,7 @@ nav ul li a {
   width: 1.75rem;
 }
 .products .plant button:hover {
+  cursor: pointer;
   box-shadow: 1px 3px 9px 0px rgba(22, 59, 12, 0.6);
 }
 
